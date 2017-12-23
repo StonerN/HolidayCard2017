@@ -33,8 +33,8 @@ void setup()
 void draw()
 {
   backgroundSetup();
-  fish();
-  grinch();
+  //fish();
+  //grinch();
   snow2();
   words();
   
