@@ -1,15 +1,32 @@
 PImage grinch;
 PImage grinchFlip;
 PImage fish;
+int xFish = 500;
+int yFish = 510;
+boolean yDir = false;
+int xGrinch = -500;
+int yGrinch = 180;
+boolean vertDir = true;
+boolean horizDir = true;
+int xWord = -500;
+int yWord = 250;
+int wordNumber = 1;
+int[] xSnow2 = new int[200];
+int[] ySnow2 = new int[200];
+int[] sizeSnow2 = new int[200];
+int[] vertSpeedSnow2 = new int[200];
+int[] horizSpeedSnow2 = new int[200];
+
+
 
 
 void setup()
 {
   size(600,600);
   snow2Setup();
-  grinch = loadImage("theGrinch.png");
-  grinchFlip = loadImage("theGrinchMirror.png");
-  fish = loadImage("fish.png");
+  grinch = loadImage("data/theGrinch.png");
+  grinchFlip = loadImage("data/theGrinchMirror.png");
+  fish = loadImage("data/fish.png");
   fish.resize(50,50);
 }
 
@@ -54,9 +71,7 @@ void backgroundSetup() {
   
   
 }
-int xFish = 500;
-int yFish = 510;
-boolean yDir = false;
+
 
 void fish() {
   image(fish, xFish, yFish);
@@ -73,10 +88,7 @@ void fish() {
   else
   yFish++;
 }
-int xGrinch = -500;
-int yGrinch = 180;
-boolean vertDir = true;
-boolean horizDir = true;
+
 
 void grinch() {
   if (horizDir)
@@ -109,9 +121,7 @@ void grinch() {
   else
   xGrinch-=2;
 }
-int xWord = -500;
-int yWord = 250;
-int wordNumber = 1;
+
 
 void words() {
   
@@ -178,11 +188,7 @@ void words() {
   }
   }
 }
-int[] xSnow2 = new int[200];
-int[] ySnow2 = new int[200];
-int[] sizeSnow2 = new int[200];
-int[] vertSpeedSnow2 = new int[200];
-int[] horizSpeedSnow2 = new int[200];
+
 
 
 
